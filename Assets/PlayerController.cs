@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
         Vector3 pos = Vector3.zero;
         pos.x = Input.GetAxis("Horizontal") * playerMoveSpeed;
         pos.z = Input.GetAxis("Vertical") * playerMoveSpeed;
+        pos.Normalize();
 
         this.transform.position = pos;
     }
